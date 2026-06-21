@@ -45,23 +45,16 @@
     <circle cx="150" cy="640" r="50"/>
   </g>
 
-  <!-- scattered paralinguistic markers: kept off the centered text/cards column (roughly x 420-1180) -->
-  <g font-size="46" opacity="0.32">
-    <text x="70" y="90">😂</text>
-    <text x="1480" y="80">😮</text>
-    <text x="1500" y="260">😢</text>
-    <text x="40" y="270">🥱</text>
-    <text x="1430" y="660">😴</text>
-    <text x="1280" y="610">💨</text>
-    <text x="80" y="450">🤧</text>
-    <text x="1380" y="380">😔</text>
-    <text x="60" y="610">😮</text>
-    <text x="160" y="710">😢</text>
-    <text x="1520" y="450">🥱</text>
-    <text x="1250" y="120">🎵</text>
-    <text x="120" y="340">😩</text>
-    <text x="1450" y="540">🤢</text>
-    <text x="200" y="120">👃</text>
-    <text x="1330" y="710">👄</text>
+  <!-- scattered face-only NVV markers, irregular/randomized placement, kept inset from all four edges (clear of the nav, the wave at the bottom, the centered text/cards column, and the stat strip) -->
+  <g opacity="0.32">
+    <text x="80" y="150" font-size="40" transform="rotate(-6 80 150)">😂</text>
+    <text x="260" y="195" font-size="34" transform="rotate(8 260 195)">😢</text>
+    <text x="105" y="330" font-size="44" transform="rotate(4 105 330)">🤧</text>
+    <text x="300" y="420" font-size="36" transform="rotate(-5 300 420)">😴</text>
+    <text x="80" y="535" font-size="38" transform="rotate(7 80 535)">😮</text>
+    <text x="1495" y="140" font-size="38" transform="rotate(5 1495 140)">🥱</text>
+    <text x="1290" y="255" font-size="42" transform="rotate(-7 1290 255)">😔</text>
+    <text x="1480" y="395" font-size="36" transform="rotate(6 1480 395)">😩</text>
+    <text x="1320" y="515" font-size="40" transform="rotate(-4 1320 515)">🤢</text>
   </g>
 </svg>
