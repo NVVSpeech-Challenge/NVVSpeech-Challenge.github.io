@@ -522,6 +522,16 @@ main { max-width: 980px; margin: 0 auto; padding: 0 32px; }
   line-height: 1.4;
 }
 
+.organizer-item .email {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.organizer-item .email a {
+  color: var(--primary-dark);
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
