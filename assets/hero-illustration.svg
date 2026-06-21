@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="waveFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- layered audio waveforms, left and right margins -->
+  <g fill="none" stroke="url(#waveFade)" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <path d="M40,500 L40,540 M70,480 L70,560 M100,510 L100,530 M130,460 L130,580 M160,490 L160,550
+             M190,440 L190,600 M220,480 L220,560 M250,500 L250,540 M280,420 L280,620
+             M310,480 L310,560"/>
+  </g>
+
+  <g fill="none" stroke="url(#waveFade)" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <path d="M1280,140 L1280,180 M1310,120 L1310,200 M1340,150 L1340,170 M1370,100 L1370,220
+             M1400,130 L1400,190 M1430,90 L1430,230 M1460,130 L1460,190 M1490,150 L1490,170
+             M1520,70 L1520,250 M1550,130 L1550,190"/>
+  </g>
+
+  <g fill="none" stroke="url(#waveFade)" stroke-width="2" stroke-linecap="round" opacity="0.45">
+    <path d="M60,120 L60,150 M85,100 L85,170 M110,125 L110,145 M135,90 L135,180
+             M160,115 L160,155 M185,80 L185,190 M210,115 L210,155"/>
+  </g>
+
+  <g fill="none" stroke="url(#waveFade)" stroke-width="2" stroke-linecap="round" opacity="0.45">
+    <path d="M1380,560 L1380,590 M1405,545 L1405,605 M1430,565 L1430,585 M1455,535 L1455,615
+             M1480,555 L1480,595 M1505,525 L1505,625 M1530,555 L1530,595"/>
+  </g>
+
+  <!-- concentric vocalization ripples -->
+  <g fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2">
+    <circle cx="1300" cy="470" r="44"/>
+    <circle cx="1300" cy="470" r="76"/>
+    <circle cx="1300" cy="470" r="108"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.16">
+    <circle cx="230" cy="220" r="32"/>
+    <circle cx="230" cy="220" r="58"/>
+    <circle cx="230" cy="220" r="84"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.14">
+    <circle cx="150" cy="640" r="28"/>
+    <circle cx="150" cy="640" r="50"/>
+  </g>
+
+  <!-- scattered paralinguistic markers: kept off the centered text/cards column (roughly x 420-1180) -->
+  <g font-size="46" opacity="0.32">
+    <text x="70" y="90">😂</text>
+    <text x="1480" y="80">😮</text>
+    <text x="1500" y="260">😢</text>
+    <text x="40" y="270">🥱</text>
+    <text x="1430" y="660">😴</text>
+    <text x="1280" y="610">💨</text>
+    <text x="80" y="450">🤧</text>
+    <text x="1380" y="380">😔</text>
+    <text x="60" y="610">😮</text>
+    <text x="160" y="710">😢</text>
+    <text x="1520" y="450">🥱</text>
+    <text x="1250" y="120">🎵</text>
+    <text x="120" y="340">😩</text>
+    <text x="1450" y="540">🤢</text>
+    <text x="200" y="120">👃</text>
+    <text x="1330" y="710">👄</text>
+  </g>
+</svg>

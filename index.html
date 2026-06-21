@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVVSpeech Challenge @ ISCSLP 2026</title>
+<meta name="description" content="NVVSpeech Challenge: Understanding and Generation of Speech with Nonverbal Vocalizations, a shared task at ISCSLP 2026.">
+<link rel="stylesheet" href="style.css">
+<script>
+  window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-brand" href="#top">
+    <img src="assets/logo.svg" alt="" class="logo-mark">
+    <span>NVVSpeech</span>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#tracks">Tracks</a></li>
+    <li><a href="#labelset">NVV Labels</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#registration">Registration</a></li>
+    <li><a href="#organizers">Organizers</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#citation">Citation</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-decor" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+  <div class="hero-content">
+    <img src="assets/logo.svg" alt="NVVSpeech Challenge logo" class="hero-logo">
+    <p class="hero-eyebrow">Special Challenge Session &middot; ISCSLP 2026</p>
+    <h1>NVVSpeech&nbsp;Challenge</h1>
+    <p class="subtitle">Understanding and Generation of Speech with Non&#8209;Verbal Vocalizations</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="#registration">Register Now</a>
+    </div>
+  </div>
+  <div class="stat-strip">
+    <div class="stat-card"><span class="stat-num">2</span><span class="stat-label">Tracks</span></div>
+    <div class="stat-card"><span class="stat-num">2</span><span class="stat-label">Languages</span></div>
+    <div class="stat-card"><span class="stat-num">16</span><span class="stat-label">NVV Types</span></div>
+    <div class="stat-card"><span class="stat-num">2026</span><span class="stat-label">ISCSLP Session</span></div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,40 L1440,80 L0,80 Z" fill="#ffffff"></path>
+  </svg>
+</header>
+
+<main>
+
+<section id="overview" class="section">
+  <h2>Background and Motivation</h2>
+  <p>
+    Human spoken communication extends beyond linguistic content. In natural conversations, speakers
+    frequently produce <strong>nonverbal vocalizations (NVVs)</strong>, such as laughter, sighs, crying,
+    coughing, breathing, gasps, yawns, and other paralinguistic sounds. These vocalizations convey emotion,
+    attitude, feedback, turn-taking cues, social intent, and, in some cases, physiological states. However,
+    most current spoken language processing systems remain largely transcript-centric: automatic speech
+    recognition systems often omit or normalize nonverbal vocalizations, while text-to-speech systems
+    usually focus on generating fluent linguistic content without reliably modeling or controlling such
+    expressive vocal events.
+  </p>
+  <p>
+    Recent progress in speech language models, expressive speech synthesis, and multimodal conversational
+    agents makes it timely to revisit speech with nonverbal vocalizations as a core spoken language
+    processing problem. For understanding, systems need to detect, classify, and locate nonverbal
+    vocalizations relative to the accompanying transcript. For generation, systems need to synthesize
+    speech that naturally integrates specified nonverbal vocalizations while preserving speech
+    intelligibility, naturalness, and acoustic continuity between verbal and nonverbal segments.
+  </p>
+  <p>
+    NVVSpeech challenge aims to promote nonverbal vocalizations as a crucial yet under-explored component
+    of spoken language communication. It defines shared task settings for both Mandarin Chinese and
+    English, provides held-out test sets, baseline implementations, and standardized evaluation protocols,
+    and enables the community to examine the current capability boundaries of speech understanding and
+    generation systems with nonverbal vocalizations. NVVSpeech will help identify remaining technical
+    bottlenecks and establish more reproducible comparisons across systems, while encouraging research on
+    paralinguistic speech understanding, expressive and controllable speech generation, speech language
+    models, and evaluation methods for more human-like spoken interaction.
+  </p>
+</section>
+
+<section id="tracks" class="section alt">
+  <h2>Challenge Overview</h2>
+  <p>The challenge contains two tracks. Both tracks will be evaluated on Mandarin Chinese and English test sets.</p>
+
+  <div class="track-card track-1">
+    <div class="track-icon">👂</div>
+    <h3>Track 1 &mdash; Nonverbal Vocalizations Understanding in Speech</h3>
+    <p><strong>Task definition.</strong> Given an input speech recording, participants are required to generate
+      a tagged transcript that identifies the spoken content and all nonverbal vocalizations (NVVs), including
+      their categories and transcript-relative positions.</p>
+
+    <p><strong>Input.</strong> Audio recordings containing natural speech with one, or multiple NVVs. For the
+      evaluation set, only the audio recordings will be released. Reference transcripts and NVV annotations
+      will remain hidden for official evaluation.</p>
+
+    <p><strong>Output.</strong> Participants submit a structured prediction file for each utterance, for example:</p>
+    <pre class="code-block">{
+  "utt_id": "example_001",
+  "text_with_nvvs": "That was really surprising. [laugh]"
+}</pre>
+
+    <p><strong>Evaluation metrics.</strong> Track 1 evaluates the ability to jointly recognize NVV categories,
+      predict their transcript-relative positions, and generate accurate tagged transcripts.</p>
+
+    <p>The official ranking score is defined as:</p>
+    <p class="formula">$$\text{Track1Score} = 100 \times \big[0.70 \cdot F1_{\text{micro}} + 0.20 \cdot (1-\text{mNTD}) + 0.10 \cdot (1-\min(\text{Err}_{\text{tagged}},1))\big]$$</p>
+
+    <ul>
+      <li><strong>Event-based Micro F1</strong> is computed by pooling all NVV events across categories. A
+        predicted event is considered correct only when it has the correct NVV category and transcript-relative
+        position after text normalization and alignment.</li>
+      <li><strong>Multi-event Normalized Tag Distance (mNTD)</strong> measures the placement error between
+        predicted and reference NVV tags. Lower mNTD indicates more accurate NVV placement.</li>
+      <li><strong>Tagged-transcript Error</strong> is computed on the complete transcript with NVV tags, where
+        each NVV tag is treated as a single atomic token. For Mandarin Chinese, we report tag-aware character
+        error rate (CER); for English, we report tag-aware word error rate (WER). Lower error rates indicate
+        more accurate recognition of both linguistic content and NVV tags.</li>
+    </ul>
+
+    <p>The final bilingual ranking score is the average of the Chinese and English scores:</p>
+    <p class="formula">$$\text{FinalTrack1Score} = \frac{\text{Track1Score}_{ZH} + \text{Track1Score}_{EN}}{2}$$</p>
+  </div>
+
+  <div class="track-card track-2">
+    <div class="track-icon">🔊</div>
+    <h3>Track 2 &mdash; Controllable Speech Generation with Nonverbal Vocalizations</h3>
+    <p><strong>Task definition.</strong> Given a transcript containing one or more NVV tags, participants are
+      required to generate speech that naturally integrates the specified NVVs while maintaining
+      intelligibility, naturalness, quality, and appropriate expressive delivery.</p>
+
+    <p><strong>Input.</strong> Each test sample contains a tagged transcript, for example:</p>
+    <pre class="code-block">{
+  "utt_id": "example_002",
+  "text_with_nvvs": "That was really surprising. [laugh]"
+}</pre>
+
+    <p><strong>Output.</strong> Participants must submit one generated waveform for each test utterance in 16 kHz,
+      mono, 16-bit PCM WAV format. Each file must be named using the corresponding utt_id
+      (e.g., <code>example_002.wav</code>). Systems with different native sampling rates may resample their
+      outputs to the required format before submission.</p>
+
+    <p><strong>Evaluation metrics.</strong> Track 2 evaluates whether a system can generate the intended NVVs
+      while maintaining natural, high-quality, and contextually appropriate speech. Evaluation will be conducted
+      using standardized large audio-language model (LALM)-based assessment and human listening tests.</p>
+
+    <p>For each language, the official score is defined as:</p>
+    <p class="formula">$$\text{Track2Score} = 100 \times (0.30A + 0.25P + 0.15N + 0.15Q + 0.15E)$$</p>
+    <p>where all component scores are rated on a five-point scale and normalized to the range $[0,1]$.</p>
+
+    <ul>
+      <li><strong>NVV Accuracy (A)</strong> measures whether the intended NVV types, numbers, and positions are
+        correctly realized.</li>
+      <li><strong>NVV Perceptual Effect (P)</strong> measures whether the intended NVVs are clearly audible,
+        recognizable, and perceptually effective.</li>
+      <li><strong>Overall Naturalness (N)</strong> measures the naturalness, fluency, and acoustic continuity
+        of the full utterance.</li>
+      <li><strong>Overall Quality (Q)</strong> measures perceived audio quality, including the absence of
+        noticeable artifacts.</li>
+      <li><strong>Overall Expression (E)</strong> measures whether the expressive delivery is coherent and
+        appropriate for the linguistic content, target NVVs, and conversational context.</li>
+    </ul>
+
+    <p>The evaluation design is adapted from <strong>NVV-SuperBench</strong>. Further details of the evaluation
+      framework are available in the
+      <a href="https://arxiv.org/pdf/2604.16211" target="_blank" rel="noopener">paper</a>.
+      Code, evaluation scripts, and related resources are available on
+      <a href="https://github.com/lmxue/NVV-SuperBench" target="_blank" rel="noopener">GitHub</a>.</p>
+
+    <p>The final bilingual ranking score is the average of the Chinese and English scores:</p>
+    <p class="formula">$$\text{FinalTrack2Score} = \frac{\text{Track2Score}_{ZH} + \text{Track2Score}_{EN}}{2}$$</p>
+
+    <p>For the public leaderboard, scores will be obtained using a fixed LALM-based multi-rater evaluation
+      protocol. For the final ranking, top-ranked systems will additionally undergo human listening tests. The
+      final scores will combine LALM-based and human ratings according to the official evaluation protocol.</p>
+
+    <p>Systems will be ranked by the final Track2Score in descending order. In the event of a tie, higher NVV
+      Accuracy, higher NVV Perceptual Effect, and higher Overall Naturalness will be used sequentially as
+      tie-breaking criteria.</p>
+  </div>
+</section>
+
+<section id="labelset" class="section">
+  <h2>NVV Label Set</h2>
+  <div class="label-grid">
+    <span class="label-chip">💨 breath</span>
+    <span class="label-chip">👃 sniff</span>
+    <span class="label-chip">😂 laugh</span>
+    <span class="label-chip">😢 crying</span>
+    <span class="label-chip">🤧 cough</span>
+    <span class="label-chip">🧹 throat clearing</span>
+    <span class="label-chip">🤧 sneeze</span>
+    <span class="label-chip">😔 sigh</span>
+    <span class="label-chip">😮 gasp</span>
+    <span class="label-chip">😴 snore</span>
+    <span class="label-chip">🥱 yawn</span>
+    <span class="label-chip">🎵 hum</span>
+    <span class="label-chip">😩 moan</span>
+    <span class="label-chip">🐍 hissing</span>
+    <span class="label-chip">👄 lipsmack</span>
+    <span class="label-chip">🤢 burp</span>
+  </div>
+</section>
+
+<section id="timeline" class="section alt">
+  <h2>Challenge Timeline</h2>
+  <p>The timeline is designed to align with the ISCSLP 2026 special session and challenge schedule.</p>
+  <ol class="vtimeline">
+    <li><span class="vt-date">20 June 2026</span><span class="vt-event">Challenge website and registration open</span></li>
+    <li><span class="vt-date">6 July 2026</span><span class="vt-event">Baseline system</span></li>
+    <li><span class="vt-date">22 July 2026</span><span class="vt-event">Evaluation set release</span></li>
+    <li><span class="vt-date">29 July 2026</span><span class="vt-event">Final system submission deadline / leaderboard freeze</span></li>
+    <li><span class="vt-date">3 August 2026</span><span class="vt-event">System description paper submission deadline</span></li>
+    <li><span class="vt-date">31 August 2026</span><span class="vt-event">Paper acceptance notification</span></li>
+    <li><span class="vt-date">21 September 2026</span><span class="vt-event">Camera-ready deadline</span></li>
+    <li><span class="vt-date">14&ndash;17 November 2026</span><span class="vt-event">ISCSLP 2026 conference</span></li>
+  </ol>
+</section>
+
+<section id="rules" class="section">
+  <h2>Challenge Rules</h2>
+  <ol class="rules-list">
+    <li><strong>Open-resource setting.</strong> The organizers will provide the evaluation inputs and task
+      formats, but not an official training set. Participants may use publicly available datasets, pretrained
+      models, and other resources that are legally permitted for academic research.</li>
+    <li><strong>External resources and disclosure.</strong> All external datasets, pretrained models, synthetic
+      data, data augmentation methods, external tools, and APIs used in a submission must be clearly disclosed
+      in the system description paper. Participants are responsible for complying with the licenses and terms
+      of use of all external resources.</li>
+    <li><strong>Evaluation data and hidden labels.</strong> Participants may download and use the officially
+      released evaluation inputs. The corresponding reference labels and evaluation answers will remain hidden.
+      Participants must not obtain or use any hidden test annotations, reference outputs, or other undisclosed
+      evaluation information through data leakage, unauthorized access, or other improper means.</li>
+    <li><strong>No manual test-set intervention.</strong> All submitted predictions and generated waveforms
+      must be produced automatically by the submitted system. Manual, sample-by-sample annotation, correction,
+      selection, or modification of test predictions or evaluation outputs is prohibited.</li>
+    <li><strong>Track 2 generation requirements.</strong> Each submitted waveform must be fully generated by
+      the submitted system from the provided test input. Manual waveform editing, manually selected
+      sample-level splicing, or test-instance-specific recording is prohibited. Automatic post-processing that
+      is part of the submitted pipeline is allowed but must be disclosed.</li>
+    <li><strong>Reproducibility verification.</strong> Teams provisionally ranked among the top submissions may
+      be required to provide inference scripts, model configurations, and environment specifications for
+      verification. Teams that fail to provide the requested materials within the specified deadline may be
+      removed from the official final ranking.</li>
+    <li><strong>System description paper.</strong> A system description paper must be submitted by the stated
+      deadline for a team to be eligible for the official final ranking, awards, and presentation in the
+      challenge session. Teams without a submitted paper may appear on the public leaderboard but will be
+      treated as unofficial.</li>
+  </ol>
+</section>
+
+<section id="registration" class="section alt">
+  <h2>Registration</h2>
+  <div class="registration-buttons">
+    <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeqsc69MhVMVx7yixcI5fR5pQwVnCx7xvAWuolbFS8nQlPxtQ/viewform?usp=dialog" target="_blank" rel="noopener">Google Registration Form</a>
+    <a class="btn btn-primary" href="https://docs.qq.com/form/page/DY3JjbkVEd3FFd3Vt" target="_blank" rel="noopener">Tencent Registration Form</a>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <h2>FAQ</h2>
+  <p class="muted">FAQ will be updated here as questions arrive. If you have a question, please contact the organizers below.</p>
+</section>
+
+<section id="organizers" class="section alt">
+  <h2>Challenge Organizers</h2>
+  <div class="organizer-grid">
+    <div class="organizer-item">
+      <h4>Liumeng Xue</h4>
+      <p class="affil">Nanjing University</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Lei Xie</h4>
+      <p class="affil">Northwestern Polytechnical University</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Wei Xue</h4>
+      <p class="affil">The Hong Kong University of Science and Technology</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Haibin Wu</h4>
+      <p class="affil">Meta</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Xinyuan Qian</h4>
+      <p class="affil">University of Science and Technology Beijing</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Shuai Wang</h4>
+      <p class="affil">Nanjing University</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Hui Bu</h4>
+      <p class="affil">AISHELL</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Jingbin Hu</h4>
+      <p class="affil">Northwestern Polytechnical University</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Yuang Cao</h4>
+      <p class="affil">Northwestern Polytechnical University</p>
+    </div>
+    <div class="organizer-item">
+      <h4>Qirui Zhan</h4>
+      <p class="affil">Northwestern Polytechnical University</p>
+    </div>
+  </div>
+</section>
+
+<section id="citation" class="section alt">
+  <h2>Citation</h2>
+  <p>The evaluation framework behind this challenge is described in the NVV-SuperBench paper. If you
+    use this challenge or its evaluation protocol in your work, please cite:</p>
+  <pre class="code-block">@article{xue2026nvvsuperbench,
+  title = {{NVV-SuperBench}: Beyond Words, Beyond Quality---Benchmarking Nonverbal Vocalizations in Speech Generation},
+  author = {Xue, Liumeng and Bian, Weizhen and Pan, Jiahao and Wu, Wenxuan and Ren, Yilin and Kang, Boyi and Hu, Jingbin and Ma, Ziyang and Wang, Shuai and Qian, Xinyuan and Lee, Hung-yi and Guo, Yike},
+  journal = {arXiv preprint arXiv:2604.16211},
+  year = {2026}
+}</pre>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>NVVSpeech Challenge &middot; ISCSLP 2026 Special Challenge Session</p>
+  <p>Contact: <a href="mailto:lmxue@nju.edu.cn">lmxue@nju.edu.cn</a> &middot;
+     <a href="https://github.com/lmxue/nvvspeech-challenge" target="_blank" rel="noopener">GitHub</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
