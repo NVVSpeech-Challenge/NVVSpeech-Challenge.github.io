@@ -434,28 +434,65 @@ main { max-width: 980px; margin: 0 auto; padding: 0 32px; }
   overflow-x: auto;
 }
 
-/* ---------- NVV labels ---------- */
+/* ---------- NVV samples (collapsible) ---------- */
 
-.label-grid {
-  display: flex;
-  flex-wrap: wrap;
+.nvv-sample-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  align-items: start;
 }
 
-.label-chip {
+.nvv-sample {
   background: var(--bg-alt);
   border: 1px solid var(--border);
-  color: var(--primary-dark);
+  border-radius: 14px;
   padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  transition: background 0.15s ease, transform 0.15s ease;
 }
 
-.label-chip:hover {
-  background: #eef0fd;
-  transform: translateY(-2px);
+@media (max-width: 640px) {
+  .nvv-sample-grid { grid-template-columns: 1fr; }
+}
+
+.nvv-sample summary {
+  cursor: pointer;
+  list-style: none;
+  color: var(--primary-dark);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 2px 0;
+}
+
+.nvv-sample summary::-webkit-details-marker { display: none; }
+
+.nvv-sample summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 0.7em;
+  transition: transform 0.15s ease;
+}
+
+.nvv-sample[open] summary::before { transform: rotate(90deg); }
+
+.nvv-sample summary:hover { text-decoration: underline; }
+
+.nvv-sample-body { margin-top: 10px; }
+
+.nvv-sample-body audio {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.nvv-text-zh, .nvv-text-en {
+  text-align: left;
+  font-size: 0.88rem;
+  margin: 4px 0;
+}
+
+.nvv-text-en {
+  color: var(--muted);
+  font-style: italic;
 }
 
 /* ---------- Vertical timeline ---------- */
