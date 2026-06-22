@@ -24,13 +24,16 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
+    <li><a href="#news">News</a></li>
     <li><a href="#overview">Overview</a></li>
     <li><a href="#tracks">Tracks</a></li>
     <li><a href="#labelset">NVV Labels</a></li>
     <li><a href="#timeline">Timeline</a></li>
     <li><a href="#rules">Rules</a></li>
     <li><a href="#registration">Registration</a></li>
+    <li><a href="#leaderboard">Leaderboard</a></li>
     <li><a href="#organizers">Organizers</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#citation">Citation</a></li>
   </ul>
@@ -63,6 +66,14 @@
 </header>
 
 <main>
+
+<section id="news" class="section alt">
+  <h2>News</h2>
+  <ul class="news-list">
+    <li><span class="news-date">22 Jun 2026</span><span class="news-text">The challenge website is live and registration is now open via the Google and Tencent forms below.</span></li>
+    <li><span class="news-date">15 Jun 2026</span><span class="news-text">The NVVSpeech Challenge has been accepted as a special challenge session at ISCSLP 2026.</span></li>
+  </ul>
+</section>
 
 <section id="overview" class="section">
   <h2>Background and Motivation</h2>
@@ -204,7 +215,7 @@
     <span class="label-chip">💨 breath</span>
     <span class="label-chip">👃 sniff</span>
     <span class="label-chip">😂 laugh</span>
-    <span class="label-chip">😢 crying</span>
+    <span class="label-chip">😢 cry</span>
     <span class="label-chip">🤧 cough</span>
     <span class="label-chip">🧹 throat clearing</span>
     <span class="label-chip">🤧 sneeze</span>
@@ -214,7 +225,7 @@
     <span class="label-chip">🥱 yawn</span>
     <span class="label-chip">🎵 hum</span>
     <span class="label-chip">😩 moan</span>
-    <span class="label-chip">🐍 hissing</span>
+    <span class="label-chip">😬 hiss</span>
     <span class="label-chip">👄 lipsmack</span>
     <span class="label-chip">🤢 burp</span>
   </div>
@@ -224,7 +235,7 @@
   <h2>Challenge Timeline</h2>
   <p>The timeline is designed to align with the ISCSLP 2026 special session and challenge schedule.</p>
   <ol class="vtimeline">
-    <li><span class="vt-date">20 June 2026</span><span class="vt-event">Challenge website and registration open</span></li>
+    <li class="is-past"><span class="vt-date">22 June 2026</span><span class="vt-event">Challenge website and registration open</span></li>
     <li><span class="vt-date">6 July 2026</span><span class="vt-event">Baseline system</span></li>
     <li><span class="vt-date">22 July 2026</span><span class="vt-event">Evaluation set release</span></li>
     <li><span class="vt-date">29 July 2026</span><span class="vt-event">Final system submission deadline / leaderboard freeze</span></li>
@@ -275,9 +286,10 @@
   </div>
 </section>
 
-<section id="faq" class="section">
-  <h2>FAQ</h2>
-  <p class="muted">FAQ will be updated here as questions arrive. If you have a question, please contact the organizers below.</p>
+<section id="leaderboard" class="section">
+  <h2>Leaderboard</h2>
+  <p class="muted">The leaderboard will open after the evaluation set is released on 22 July 2026. Official
+    rankings for Track 1 and Track 2 will be published here following the evaluation protocol described above.</p>
 </section>
 
 <section id="organizers" class="section alt">
@@ -324,14 +336,14 @@
       <p class="email"><a href="mailto:buhui@aishelldata.com">buhui@aishelldata.com</a></p>
     </div>
     <div class="organizer-item">
-      <h4>Jingbin Hu</h4>
-      <p class="affil">Northwestern Polytechnical University</p>
-      <p class="email"><a href="mailto:jingbin.hu@mail.nwpu.edu.cn">jingbin.hu@mail.nwpu.edu.cn</a></p>
-    </div>
-    <div class="organizer-item">
       <h4>Yuang Cao</h4>
       <p class="affil">Northwestern Polytechnical University</p>
       <p class="email"><a href="mailto:yacao@mail.nwpu.edu.cn">yacao@mail.nwpu.edu.cn</a></p>
+    </div>
+    <div class="organizer-item">
+      <h4>Jingbin Hu</h4>
+      <p class="affil">Northwestern Polytechnical University</p>
+      <p class="email"><a href="mailto:jingbin.hu@mail.nwpu.edu.cn">jingbin.hu@mail.nwpu.edu.cn</a></p>
     </div>
     <div class="organizer-item">
       <h4>Huakang Chen</h4>
@@ -346,7 +358,22 @@
   </div>
 </section>
 
-<section id="citation" class="section alt">
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>If you have any questions, feel free to contact us:</p>
+  <p>Email: <a href="mailto:nvvspeech_iscslp2026@googlegroups.com">nvvspeech_iscslp2026@googlegroups.com</a></p>
+  <details class="qr-toggle">
+    <summary>Show WeChat group QR code</summary>
+    <img src="assets/nvvchallenge_qrcode.jpg" alt="NVVSpeech Challenge 2026 WeChat group QR code" class="qr-image">
+  </details>
+</section>
+
+<section id="faq" class="section alt">
+  <h2>FAQ</h2>
+  <p class="muted">FAQ will be updated here as questions arrive.</p>
+</section>
+
+<section id="citation" class="section">
   <h2>Citation</h2>
   <p>The evaluation framework behind this challenge is described in the NVV-SuperBench paper. If you
     use this challenge or its evaluation protocol in your work, please cite:</p>
@@ -362,7 +389,7 @@
 
 <footer class="footer">
   <p>NVVSpeech Challenge &middot; ISCSLP 2026 Special Challenge Session</p>
-  <p>Contact: <a href="mailto:lmxue@nju.edu.cn">lmxue@nju.edu.cn</a> &middot;
+  <p>Contact: <a href="mailto:nvvspeech_iscslp2026@googlegroups.com">nvvspeech_iscslp2026@googlegroups.com</a> &middot;
      <a href="https://github.com/lmxue/nvvspeech-challenge" target="_blank" rel="noopener">GitHub</a></p>
 </footer>
 
