@@ -161,13 +161,14 @@
 
     <p>For each language, the official score is defined as:</p>
     <p class="formula">$$\text{Track2Score} = 100 \times (0.30A + 0.25P + 0.15N + 0.15Q + 0.15E)$$</p>
-    <p>where all component scores are rated on a five-point scale and normalized to the range $[0,1]$.</p>
+    <!-- <p>where all component scores are rated on a five-point scale and normalized to the range $[0,1]$.</p> -->
 
     <ul>
       <li><strong>NVV Accuracy (A)</strong> measures whether the intended NVV types, numbers, and positions are
-        correctly realized.</li>
+        correctly realized. If the target NVV is absent or almost inaudible, the score is 0.</li>
       <li><strong>NVV Perceptual Effect (P)</strong> measures whether the intended NVVs are clearly audible,
-        recognizable, and perceptually effective.</li>
+        recognizable, and perceptually effective. A score of 0 indicates that the target NVV is absent or
+        almost inaudible.</li>
       <li><strong>Overall Naturalness (N)</strong> measures the naturalness, fluency, and acoustic continuity
         of the full utterance.</li>
       <li><strong>Overall Quality (Q)</strong> measures perceived audio quality, including the absence of
