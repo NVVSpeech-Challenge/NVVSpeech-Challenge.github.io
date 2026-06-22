@@ -504,21 +504,14 @@ main { max-width: 980px; margin: 0 auto; padding: 0 32px; }
 
 .organizer-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 36px 24px;
   text-align: center;
 }
 
 .organizer-item {
   min-width: 0;
-  grid-column: span 2;
 }
-
-/* last row of 3: offset by half a column so each item's center lines up
-   with the gap between two items in the rows above */
-.organizer-item:nth-child(9) { grid-column: 2 / span 2; }
-.organizer-item:nth-child(10) { grid-column: 4 / span 2; }
-.organizer-item:nth-child(11) { grid-column: 6 / span 2; }
 
 .organizer-item h4 {
   margin: 0 0 6px;
@@ -575,19 +568,11 @@ main { max-width: 980px; margin: 0 auto; padding: 0 32px; }
 }
 
 @media (max-width: 760px) {
-  .organizer-grid { grid-template-columns: repeat(4, 1fr); }
-  .organizer-item,
-  .organizer-item:nth-child(9),
-  .organizer-item:nth-child(10),
-  .organizer-item:nth-child(11) { grid-column: span 2; }
+  .organizer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
   .organizer-grid { grid-template-columns: 1fr; }
-  .organizer-item,
-  .organizer-item:nth-child(9),
-  .organizer-item:nth-child(10),
-  .organizer-item:nth-child(11) { grid-column: 1 / -1; }
 }
 
 @media (max-width: 640px) {
