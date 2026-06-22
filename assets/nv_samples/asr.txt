@@ -1,0 +1,17 @@
+breath.wav	你讲话可以正经一点吗？很正经了，[breath]比你年轻的快乐，正经一百倍[breath]。 你[breath]
+sniff.wav	走进新装修好的房子，[sniffle] 有一股淡淡的油漆味和木头的味道。
+laugh.wav	[laugh]小朋友们，刚刚谢谢你们扶我了。
+cry.wav	[cry] 呃，这些倭寇他们把所有能拿走的都拿走了，把所有带不走的全烧了。
+cough.wav	蜜蜂的舞蹈能够精准的告诉同伴[cough]蜜源的位置，真是奇妙的沟通方式。
+throatclearing.wav	[throatclearing]听他的先休息去吧，要是自己睡不着，可以两个人一间全当是男生寝室和女生寝室。
+sneeze.wav	这鬼天气，[breath]，我感觉自己肯定是感冒了，刚才开会的时候就 [sneeze] 没忍住，真尴尬。
+sigh.wav	看着同事们一个个都升职了，而我还在原地踏步，[sigh]，心里真不是滋味。
+gasp.wav	[gasp]什么洛家，什么天蓝，你是我的，是我救了你。
+snore.wav	[snore]嗯，好家伙呼呼的他睡着了，刘球着急了，救寨主，九寨主嗯。
+yawn.wav	[yawn]啊，嗯睡得不错，要不要过来吃早饭啊，不了不了，你上了一天班，快去睡觉吧。
+hum.wav	阳光、咖啡、还有一本好书，[hum]，这才是完美的周日下午。
+hum.wav	[hum], 又学会了一首新的吉他曲子，真有成就感。
+lipsmack.wav	我敢发誓我眼睛都没眨，那条手帕就在他手里 [clap] 变成了一只白鸽，这手法 [smack] 简直是艺术。
+burp.mp3	哎呀，这顿饭吃得太撑了，[burps] 我感觉我晚饭都不用吃了。
+moan.mp3	[groans] I think I pulled a muscle in my back... [groans] [hisses] don't touch that spot.
+hiss.wav	那个巨大的蛇形怪物 [hiss] 从洞穴里探出头，英雄们一边艰难地抵挡它的攻击，一边寻找机会，最终一剑刺穿了它的弱点。
