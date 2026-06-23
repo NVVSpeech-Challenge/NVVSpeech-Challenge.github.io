@@ -638,6 +638,73 @@ main { max-width: 980px; margin: 0 auto; padding: 0 32px; }
   color: var(--primary-dark);
 }
 
+/* ---------- Dataset table ---------- */
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 18px;
+}
+
+.ds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(31, 35, 48, 0.06);
+}
+
+.ds-table thead {
+  background: var(--primary);
+  color: #fff;
+}
+
+.ds-table th {
+  padding: 12px 16px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.ds-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ds-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ds-table tbody tr:hover {
+  background: #f5f6fc;
+}
+
+.ds-table td:first-child {
+  font-weight: 700;
+  color: var(--primary-dark);
+  white-space: nowrap;
+}
+
+.ds-table th:last-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ds-table td:last-child {
+  text-align: left;
+  vertical-align: top;
+  color: var(--text);
+  font-size: 0.87rem;
+  word-break: break-word;
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
