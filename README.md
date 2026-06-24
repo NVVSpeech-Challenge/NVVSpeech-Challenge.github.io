@@ -1,7 +1,7 @@
 # NVVSpeech Challenge
 
 **Understanding and Generation of Speech with Nonverbal Vocalizations**
-- Official website of the Challenge: [NVVSpeech Challenge](https://nvvspeech-challenge.github.io/)
+- Official website of the Challenge: **[NVVSpeech Challenge](https://nvvspeech-challenge.github.io/)**
   
 - A special challenge session at **[ISCSLP 2026](https://iscslp.org/2026/)**.
 
