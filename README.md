@@ -1,8 +1,9 @@
 # NVVSpeech Challenge
 
 **Understanding and Generation of Speech with Nonverbal Vocalizations**
-
-A special challenge session at **[ISCSLP 2026](https://iscslp.org/2026/)**.
+- Official website of the Challenge: [NVVSpeech Challenge](https://nvvspeech-challenge.github.io/)
+  
+- A special challenge session at **[ISCSLP 2026](https://iscslp.org/2026/)**.
 
 
 ## About
@@ -27,7 +28,7 @@ hissing, lipsmack, burp.
 
 | Date | Event |
 |---|---|
-| 20 June 2026 | Challenge website and registration open |
+| 22 June 2026 | Challenge website and registration open |
 | 6 July 2026 | Baseline system |
 | 22 July 2026 | Evaluation set release |
 | 29 July 2026 | Final system submission deadline / leaderboard freeze |
