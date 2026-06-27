@@ -246,7 +246,11 @@
 
 <section id="tracks" class="section">
   <h2>Challenge Overview</h2>
-  <p>The challenge contains two tracks. Both tracks will be evaluated on Mandarin Chinese and English test sets.</p>
+  <p>The challenge contains two tracks. Both tracks will be evaluated on Mandarin Chinese and English test sets. The evaluation design is adapted from <strong>NVV-SuperBench</strong>. Further details of the evaluation
+      framework are available in the
+      <a href="https://arxiv.org/pdf/2604.16211" target="_blank" rel="noopener">paper</a>.
+      Code, evaluation scripts, and related resources are available on
+      <a href="https://github.com/lmxue/NVV-SuperBench" target="_blank" rel="noopener">GitHub</a>.</p>
 
   <div class="track-card track-1">
     <div class="track-icon">👂</div>
@@ -327,11 +331,11 @@
         appropriate for the linguistic content, target NVVs, and conversational context.</li>
     </ul>
 
-    <p>The evaluation design is adapted from <strong>NVV-SuperBench</strong>. Further details of the evaluation
+    <!-- <p>The evaluation design is adapted from <strong>NVV-SuperBench</strong>. Further details of the evaluation
       framework are available in the
       <a href="https://arxiv.org/pdf/2604.16211" target="_blank" rel="noopener">paper</a>.
       Code, evaluation scripts, and related resources are available on
-      <a href="https://github.com/lmxue/NVV-SuperBench" target="_blank" rel="noopener">GitHub</a>.</p>
+      <a href="https://github.com/lmxue/NVV-SuperBench" target="_blank" rel="noopener">GitHub</a>.</p> -->
 
     <p>The final bilingual ranking score is the average of the Chinese and English scores:</p>
     <p class="formula">$$\text{FinalTrack2Score} = \frac{\text{Track2Score}_{ZH} + \text{Track2Score}_{EN}}{2}$$</p>
