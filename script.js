@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var sections = document.querySelectorAll(".section");
+  var currentPage = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-links a").forEach(function (a) {
+    var href = a.getAttribute("href");
+    a.classList.toggle("is-active", href === currentPage);
+  });
   if ("IntersectionObserver" in window) {
     var revealObserver = new IntersectionObserver(
       function (entries) {
@@ -40,20 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     sections.forEach(function (s) { revealObserver.observe(s); });
 
-    var navAnchors = document.querySelectorAll(".nav-links a");
-    var spyObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            navAnchors.forEach(function (a) {
-              a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id);
-            });
-          }
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px" }
-    );
-    sections.forEach(function (s) { spyObserver.observe(s); });
   } else {
     sections.forEach(function (s) { s.classList.add("is-visible"); });
   }
