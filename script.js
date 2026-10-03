@@ -31,6 +31,25 @@ document.addEventListener("DOMContentLoaded", function () {
     var href = a.getAttribute("href");
     a.classList.toggle("is-active", href === currentPage);
   });
+
+  var more = document.querySelector(".nav-more");
+  var moreToggle = document.querySelector(".nav-more-toggle");
+  if (more && moreToggle) {
+    var moreHasActivePage = Boolean(more.querySelector('a[href="' + currentPage + '"]'));
+    more.classList.toggle("has-active-page", moreHasActivePage);
+
+    moreToggle.addEventListener("click", function () {
+      var open = more.classList.toggle("is-open");
+      moreToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!more.contains(event.target)) {
+        more.classList.remove("is-open");
+        moreToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
   if ("IntersectionObserver" in window) {
     var revealObserver = new IntersectionObserver(
       function (entries) {
