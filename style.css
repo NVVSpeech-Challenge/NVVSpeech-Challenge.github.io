@@ -144,7 +144,7 @@ a:hover { text-decoration: underline; }
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 30px;
   margin: 8px 0 0;
   padding: 0;
   flex-wrap: wrap;
@@ -154,7 +154,7 @@ a:hover { text-decoration: underline; }
 .nav-links a {
   color: #fff;
   opacity: 0.88;
-  font-size: 1.18rem;
+  font-size: 1.25rem;
   font-weight: 600;
   position: relative;
   padding-bottom: 2px;
