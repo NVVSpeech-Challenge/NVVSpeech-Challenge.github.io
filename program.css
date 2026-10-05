@@ -1,4 +1,5 @@
 /* Program page */
+.section { opacity: 1; transform: none; }
 .program-date { font-size: 1.15rem; font-weight: 600; }
 .program-table-wrap { overflow-x: auto; }
 .program-table { width: 100%; border-collapse: collapse; text-align: left; }
