@@ -8,6 +8,7 @@
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/logo.svg">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="program.css">
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
 </script>
@@ -40,9 +41,117 @@
   </ul>
 </nav>
 <main>
-<section id="program" class="section">
-  <h2>Program</h2>
-  <p class="muted">The detailed program will be announced soon.</p>
+<section id="program" class="section program-overview">
+  <h2>Program Overview</h2>
+  <p class="program-date">November 15, 2026 (Sunday)</p>
+  <div class="program-table-wrap" role="region" aria-label="Session schedule" tabindex="0">
+    <table class="program-table">
+      <caption>NVVSpeech Session Program</caption>
+      <thead><tr><th scope="col">Time</th><th scope="col">Event</th><th scope="col">Speaker / Participants</th></tr></thead>
+      <tbody>
+        <tr><td>10:30–11:10</td><td><a href="#invited-talk-1">Invited Talk 1</a></td><td>Prof. Chin-Hui LEE</td></tr>
+        <tr><td>11:10–11:50</td><td><a href="#invited-talk-2">Invited Talk 2</a></td><td>Dr. Haibin Wu</td></tr>
+        <tr><td>11:50–12:20</td><td>Elevator Speech</td><td>Accepted papers' authors</td></tr>
+        <tr><td>12:20–12:30</td><td>Challenge Summary</td><td>Challenge Organizers</td></tr>
+        <tr><td>12:30–14:00</td><td>Poster Session</td><td>Accepted papers' authors</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="invited-talks" class="section">
+  <h2>Invited Talks</h2>
+  <article id="invited-talk-1" class="program-talk">
+    <header class="program-speaker">
+      <img class="program-speaker-photo" src="assets/program/chin-hui-lee.png" alt="Chin-Hui Lee" width="180" loading="lazy">
+      <div>
+        <p class="program-talk-number">Invited Talk 1</p>
+        <h3>Paralinguistic-aware Target Speech Extraction for Cinematic Audio Source Separation</h3>
+        <p class="program-speaker-name">Prof. Chin-Hui LEE, Georgia Institute of Technology</p>
+        <p class="program-talk-time">November 15 (Sun) · 10:30–11:10</p>
+      </div>
+    </header>
+    <h4>Abstract</h4>
+    <p>Target speech extraction (TSE) is emerging as a key research issue in cinematic audio source separation (CASS), involving decomposing a soundtrack, also known as the cocktail fork problem, into its constituents: speech, music, sound effects and nonverbal vocalization (NVV). Once isolated, such individual stem facilitates various downstream applications: enhancing dialogue, remastering, dubbing content into foreign languages, or removing intrusive background noise, etc. Sound effects can range from quiet animal noise to intense thunderstorms. In addition, some movie soundtracks, once captured, are difficult to reproduce or re-record. Therefore, isolating these already-recorded mixed sources through TSE is becoming a challenging and practical issue in the movie industry. The currently prevailing end-to-end modeling strategy often relies on a large amount of condition-specific training data which is not easily met in CASS.</p>
+    <p>Recently, by utilizing movie script as a knowledge source based on automatic speech attribute transcription (ASAT) of manner of articulation, we have developed an articulation-aware TSE framework for mixed speech in the presence of background sound effects. Experimental results demonstrate that articulation labels can be reliably aligned to mixture audio and provide useful information to improve separation performance on cinematic audio. Since paralinguistics focuses on how something is said rather than what is said.  One key element to be considered is NVV, such as sighs, gasps, laughs, crying, cheering, moans, and throat-clearing. We intend to extend the articulation-aware ASAT framework to detect NVV cues and use them for paralinguistic-aware TSE in CASS. We believe there are also other knowledge sources to be utilized to further improve system performances in difficult movie tracks.</p>
+    <h4>Biography</h4>
+    <p>Chin-Hui Lee is a professor at School of Electrical and Computer Engineering, Georgia Institute of Technology. Dr. Lee received the B.S. degree in Electrical Engineering from National Taiwan University, Taipei, in 1973, the M.S. degree in Engineering and Applied Science from Yale University, New Haven, in 1977, and the Ph.D. degree in Electrical Engineering with a minor in Statistics from University of Washington, Seattle, in 1981.</p>
+    <p>Dr. Lee started his professional career at Verbex Corporation, Bedford, MA, and was involved in research on connected word recognition. In 1984, he became affiliated with Digital Sound Corporation, Santa Barbara, where he engaged in research and product development in speech coding, speech synthesis, speech recognition and signal processing for the development of the DSC-2000 Voice Server. Between 1986 and 2001, he was with Bell Laboratories, Murray Hill, New Jersey, where he became a Distinguished Member of Technical Staff and Director of the Dialogue Systems Research Department. His research interests include multimedia communication, multimedia signal and information processing, speech and speaker recognition, speech and language modeling, spoken dialogue processing, adaptive and discriminative learning, biometric authentication, and information retrieval. From August 2001 to August 2002 he was a visiting professor at School of Computing, The National University of Singapore. In September 2002, he joined the Faculty Georgia Institute of Technology.</p>
+    <p>Prof. Lee has participated actively in professional societies. He is a member of the IEEE Signal Processing Society (SPS), Communication Society, and the International Speech Communication Association (ISCA).  In 1991-1995, he was an associate editor for the IEEE Transactions on Signal Processing and Transactions on Speech and Audio Processing. During the same period, he served as a member of the ARPA Spoken Language Coordination Committee. In 1995-1998 he was a member of the Speech Processing Technical Committee and later became the chairman from 1997 to 1998. In 1996, he helped promote the SPS Multimedia Signal Processing Technical Committee in which he is a founding member.</p>
+    <p>Dr. Lee is a Fellow of the IEEE and ISCA, and has published 500 papers and 30 patents with more than 33,300 citations and an h index of 75 on Google Scholar.  He received the SPS Senior Award in 1994 and the SPS Best Paper Award in 1997 and 1999, respectively.  In 1997, he was awarded the prestigious Bell Labs President’s Gold Award for his contributions to the Lucent Speech Processing Solutions product. Dr. Lee often gives seminal lectures to a wide international audience. In 2000, he was named one of the six Distinguished Lecturers by the IEEE Signal Processing Society. He was also named one of the two ISCA’s inaugural Distinguished Lecturers in 2007-2008. He won the SPS’s 2006 Technical Achievement Award for “Exceptional Contributions to the Field of Automatic Speech Recognition”. In 2012 he was invited by ICASSP to give a plenary talk on the future of automatic speech recognition. He was awarded the 2012 ISCA Medal in scientific achievement for “pioneering and seminal contributions to the principles and practice of automatic speech and speaker recognition, including fundamental innovations in adaptive learning, discriminative training and utterance verification”.</p>
+  </article>
+  <article id="invited-talk-2" class="program-talk">
+    <header class="program-speaker">
+      <img class="program-speaker-photo" src="assets/program/haibin-wu.jpeg" alt="Haibin Wu" width="180" loading="lazy">
+      <div>
+        <p class="program-talk-number">Invited Talk 2</p>
+        <h3>Beyond Words: From Controllable Speech Generation to Scalable Non-Verbal Understanding</h3>
+        <p class="program-speaker-name">Dr. Haibin Wu, Meta</p>
+        <p class="program-talk-time">November 15 (Sun) · 11:10–11:50</p>
+      </div>
+    </header>
+    <h4>Abstract</h4>
+    <p>Human speech communicates far more than words. Laughter, breaths, cries, hesitations, and other non-verbal vocalizations convey emotion, intent, and conversational dynamics, yet they are often removed from speech annotations and treated as isolated, low-resource events.</p>
+    <p>In this talk, I present a research program in which each stage establishes a first-of-its-kind capability or advances the state of the art in non-verbal speech modeling. First, I introduce EmoCtrl-TTS, the first flow-matching TTS framework to jointly provide time-varying control over non-verbal vocalizations and emotion. Its surprising ability to generate either laughter or crying from the same laughter-derived representation reveals transferable structure within non-verbal speech. Second, I present the first systematic study of cross-NV transfer in LM-based TTS. By injecting explicit &lt;laugh&gt; and &lt;breath&gt; tokens into a semantic language model, I show that high-resource non-verbal events can improve low-resource event generation. Third, I develop a streaming RNN-T system that jointly recognizes words and non-verbal events, achieving state-of-the-art NV recognition through shared sequence- and frame-level supervision. Finally, I introduce a first-of-its-kind transcript-conditioned audio language model for foundation-scale NV annotation, strengthened through representation learning, targeted augmentation, and iterative pseudo-labeling.</p>
+    <h4>Biography</h4>
+    <p>Haibin Wu is currently an AI Research Scientist at Meta, working on speech generation and speech language models. Prior to joining Meta, he was a Senior Researcher at Microsoft, where he worked on speech language models, speech generation, and codecs. His representative works include <a href="https://www.microsoft.com/en-us/research/project/emoctrl-tts/" target="_blank" rel="noopener">EmoCtrl-TTS</a>, <a href="https://arxiv.org/abs/2411.18803" target="_blank" rel="noopener">TS3-Codec</a>, <a href="https://arxiv.org/abs/2503.01743" target="_blank" rel="noopener">Phi4-MM</a>, <a href="https://arxiv.org/pdf/2506.04518v1" target="_blank" rel="noopener">Phi-ESI</a>, <a href="https://arxiv.org/pdf/2506.04392v1" target="_blank" rel="noopener">Phi-ST</a>, and one <a href="https://arxiv.org/pdf/2504.08528" target="_blank" rel="noopener">Speech LMs</a> survey, and one <a href="https://arxiv.org/pdf/2506.10274" target="_blank" rel="noopener">audio codecs</a> survey. He received his Ph.D. from National Taiwan University under the supervision of Prof. <a href="https://scholar.google.com/citations?user=DxLO11IAAAAJ&amp;hl=zh-TW" target="_blank" rel="noopener">Hung-yi Lee</a>, and was awarded the Google PhD Fellowship. During his Ph.D., he conducted research as a visiting scholar at both Tsinghua University and the Chinese University of Hong Kong. In addition to research, he helps co-organize the SUPERB and Codec-SUPERB challenges for evaluating speech SSL and neural audio codecs. He also served as Area Chair for SLT 2024 in the codec session and ASRU 2025 in the text-to-speech session.</p>
+  </article>
+</section>
+
+<section id="accepted-papers" class="section">
+  <h2>Accepted Papers</h2>
+  <ol class="program-papers">
+    <li>
+      <h3>A Bilingual Nonverbal-Vocalization-Aware ASR System with Aligned OTF Augmentation and Evidence-Driven Fusion</h3>
+      <p class="program-paper-authors">Yucong Zhang、Cancan Li、Ming Li</p>
+      <p class="program-paper-affiliations">Wuhan University · The Chinese University of Hong Kong, Shenzhen</p>
+    </li>
+    <li>
+      <h3>Source-Adaptive Data Curation for Bilingual NVV-Aware ASR</h3>
+      <p class="program-paper-authors">Yuang Cao; Qirui Zhan; Jingbin Hu; Ziyu Zhang; Yunxiang Chen; Houdun Liu; Shuo Feng;Bengu Wu; Lei Xie; Liumeng Xue</p>
+      <p class="program-paper-affiliations">Northwestern Polytechnical University · Shenzhen Pimei Technology · Yutuzhineng · Nanjing University</p>
+    </li>
+    <li>
+      <h3>Modeling, Scaling, and Decoding: Optimizing Controllable Speech Generation with Nonverbal Vocalizations</h3>
+      <p class="program-paper-authors">Ziyu ZHANG; Yun Chen; Taihui Wang; Hanzhao Li; Qicong Xie; Rilin Chen; Zhixian Zhao</p>
+      <p class="program-paper-affiliations">Tencent</p>
+    </li>
+    <li>
+      <h3>Preference Optimization with LALM Feedback for Continuous Autoregressive Non-Verbal Vocalization Generation</h3>
+      <p class="program-paper-authors">Jingbin Hu; Qirui Zhan; Yuang Cao; Ziyu Zhang; Yunxiang Chen; Houdun Liu; Shuo Feng; Bengu Wu; Lei Xie; Liumeng Xue</p>
+      <p class="program-paper-affiliations">Northwestern Polytechnical University · Shenzhen Pimei Technology Co., Ltd. · Yutuzhineng · Nanjing University</p>
+    </li>
+    <li>
+      <h3>Co-Refine: Collaborative Dual-Stream Data Refinement for Speech Recognition with Non-Verbal Vocalizations</h3>
+      <p class="program-paper-authors">Pengyu Xu; Jiaxu He; Genliang Zhao; Hongjie Chen; Jian Kang; Jie Lian; Jie Li; Yongxiang Li</p>
+      <p class="program-paper-affiliations">Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd</p>
+    </li>
+    <li>
+      <h3>Long-Tail Rebalancing for Non-Verbal Vocalization-Aware ASR: A Track 1 System for the NVVSpeech Challenge</h3>
+      <p class="program-paper-authors">Shangyue Jia; Jingru Ma; Yangzhuo Li; Daoping Luo; Bowen Tian; Hanchen Lu; Wenze Ren; Yunxiang Chen; Houdun Liu; Shuo Feng; Lei Xie; Liumeng Xue</p>
+      <p class="program-paper-affiliations">Nanjing University · Jilin University · Beijing Institute of Technology · National Taiwan University · Shenzhen Pimei Technology Co., Ltd · Northwestern Polytechnical University</p>
+    </li>
+    <li>
+      <h3>Annotation- and ASR-Assisted Data Construction for MOSS-TTS in NVVSpeech Track 2</h3>
+      <p class="program-paper-authors">Yucheng Yuan; Xiaogui Yang; Hao Cheng; Quanwei Tang; Qi Luo; Zhaoye Fei; Xipeng Qiu</p>
+      <p class="program-paper-affiliations">MOSI</p>
+    </li>
+    <li>
+      <h3>Large-Scale Teacher Training and Tokenizer-Aligned On-Policy Distillation for Bilingual NVV Recognition</h3>
+      <p class="program-paper-authors">Hao Cheng; Zhaoye Fei; Yucheng Yuan; Quanwei Tang; Qi Luo; Jian Xiao; Xiaogui Yang; Xipeng Qiu</p>
+      <p class="program-paper-affiliations">MOSI · ByteDance</p>
+    </li>
+    <li>
+      <h3>Preserving Pretrained Expert Routing for Paralinguistic-Aware ASR: A System Description for Track 1 of the NVVSpeech Challenge 2026</h3>
+      <p class="program-paper-authors">Guoqiang Hu; Chen Geng; Eng Siong Chng</p>
+      <p class="program-paper-affiliations">Nanyang Technological University · Beijing University of Civil Engineering and Architecture</p>
+    </li>
+    <li>
+      <h3>Targeted Data Augmentation and Class-Aware Training for Bilingual Nonverbal Vocalization Recognition</h3>
+      <p class="program-paper-authors">Yun Chen; Taihui Wang; Ziyu Zhang; Jinzheng Zhao; Arshdeep Singh; Rilin Chen; Philip Jackson; Mark Plumbley</p>
+      <p class="program-paper-affiliations">King's College London · Tencent · Northwestern Polytechnical University · University of Surrey</p>
+    </li>
+  </ol>
 </section>
 </main>
 <footer class="footer">
