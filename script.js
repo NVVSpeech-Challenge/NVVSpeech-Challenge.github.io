@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0 }
     );
     sections.forEach(function (s) { revealObserver.observe(s); });
 

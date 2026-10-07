@@ -90,10 +90,11 @@ a:hover { text-decoration: underline; }
   align-items: center;
   justify-content: space-between;
   padding: 24px 48px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 32px;
   color: #fff;
   backdrop-filter: blur(10px);
-  background: rgba(30, 27, 75, 0.96);
+  background: rgba(30, 27, 75, 0.92);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   transition: background 0.25s ease, padding 0.25s ease, box-shadow 0.25s ease;
 }
@@ -106,6 +107,7 @@ a:hover { text-decoration: underline; }
 
 .nav-brand {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 12px;
   font-weight: 800;
@@ -144,17 +146,23 @@ a:hover { text-decoration: underline; }
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 28px;
   margin: 8px 0 0;
   padding: 0;
-  flex-wrap: wrap;
+  min-width: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
   align-items: center;
 }
+
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links li { flex-shrink: 0; white-space: nowrap; }
 
 .nav-links a {
   color: #fff;
   opacity: 0.88;
-  font-size: 1.25rem;
+  font-size: 1.08rem;
   font-weight: 600;
   position: relative;
   padding-bottom: 2px;
@@ -800,6 +808,8 @@ main { max-width: 980px; margin: 0 auto; padding: 0 32px; }
     display: none;
     flex-direction: column;
     width: 100%;
+    flex-basis: 100%;
+    overflow-x: visible;
     gap: 12px;
     margin-top: 14px;
     padding: 14px 0 6px;
@@ -815,6 +825,9 @@ main { max-width: 980px; margin: 0 auto; padding: 0 32px; }
 }
 
 @media (max-width: 480px) {
+  .navbar, .navbar.is-scrolled { padding-left: 20px; padding-right: 20px; }
+  .nav-brand { gap: 12px; font-size: 1.7rem; }
+  .logo-mark { flex-shrink: 0; }
   .organizer-item { flex-basis: 100%; }
 }
 
