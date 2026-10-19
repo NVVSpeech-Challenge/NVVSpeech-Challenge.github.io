@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NVVSpeech Challenge | News</title>
+<title>NVVSpeech Challenge | Home</title>
 <meta name="description" content="NVVSpeech Challenge: Understanding and Generation of Speech with Nonverbal Vocalizations, a shared task at ISCSLP 2026.">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/logo.svg">
-<link rel="stylesheet" href="style.css?v=20261008-nav-scroll-v2">
+<link rel="stylesheet" href="style.css?v=20261019-resources-v1">
 <script>
   window.MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
 </script>
@@ -23,8 +23,7 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
-    <li><a href="index.html">News</a></li>
-    <li><a href="overview.html">Overview</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="tracks.html">Tracks</a></li>
     <li><a href="labels.html">NVV Labels &amp; Samples</a></li>
     <li><a href="resources.html">Dataset Resources</a></li>
@@ -32,10 +31,11 @@
     <li><a href="rules.html">Rules</a></li>
     <li><a href="registration.html">Registration</a></li>
     <li><a href="program.html">Program</a></li>
+    <li><a href="challenge-resource.html">Challenge Resource</a></li>
     <li><a href="https://nvvspeech-challenge.github.io/NVVSpeech-Challenge-Leaderboard/" target="_blank" rel="noopener">Leaderboard</a></li>
     <li><a href="organizers.html">Organizers</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="citation.html">Citation</a></li>
+    <li><a href="index.html#citation">Citation</a></li>
   </ul>
 </nav>
 <header class="hero" id="top">
@@ -67,7 +67,8 @@
 <section id="news" class="section alt">
   <h2>News</h2>
   <ul class="news-list">
-    <li><span class="news-date">6 Oct 2026</span><span class="news-text">The challenge <a href="program.html">Program</a> is now available, including the session schedule, invited talks, and accepted papers.</span></li>
+    <li><span class="news-date">19 Oct 2026</span><span class="news-text">The <a href="challenge-resource.html#test-sets">test sets</a> and <a href="challenge-resource.html#evaluation-code">evaluation code</a> are now publicly available.</span></li>
+    <li><span class="news-date">6 Oct 2026</span><span class="news-text">The challenge <a href="program.html">Program</a> is now available.</span></li>
     <li><span class="news-date">6 Oct 2026</span><span class="news-text">The NVVSpeech Challenge 2026 <a href="https://nvvspeech-challenge.github.io/NVVSpeech-Challenge-Leaderboard/" target="_blank" rel="noopener">leaderboard</a> is available online.</span></li>
     <li><span class="news-date">3 Sep 2026</span><span class="news-text">Accepted papers are now listed on the <a href="https://iscslp.org/2026/accepted-papers" target="_blank" rel="noopener">ISCSLP 2026 website</a>.</span></li>
     <li><span class="news-date">29 Jul 2026</span><span class="news-text">Deadlines extended and CodaBench updated — see <a href="timeline.html">Challenge Timeline</a> and email.</span></li>
@@ -79,12 +80,66 @@
     <li><span class="news-date">15 Jun 2026</span><span class="news-text">The NVVSpeech Challenge has been accepted as a special challenge session at ISCSLP 2026.</span></li>
   </ul>
 </section>
+<section id="overview" class="section">
+  <h2>Overview</h2>
+  <h3>Background and Motivation</h3>
+  <p>
+    Human spoken communication extends beyond linguistic content. In natural conversations, speakers
+    frequently produce <strong>nonverbal vocalizations (NVVs)</strong>, such as laughter, sighs, crying,
+    coughing, breathing, gasps, yawns, and other paralinguistic sounds. These vocalizations convey emotion,
+    attitude, feedback, turn-taking cues, social intent, and, in some cases, physiological states. However,
+    most current spoken language processing systems remain largely transcript-centric: automatic speech
+    recognition systems often omit or normalize nonverbal vocalizations, while text-to-speech systems
+    usually focus on generating fluent linguistic content without reliably modeling or controlling such
+    expressive vocal events.
+  </p>
+  <p>
+    Recent progress in speech language models, expressive speech synthesis, and multimodal conversational
+    agents makes it timely to revisit speech with nonverbal vocalizations as a core spoken language
+    processing problem. For understanding, systems need to detect, classify, and locate nonverbal
+    vocalizations relative to the accompanying transcript. For generation, systems need to synthesize
+    speech that naturally integrates specified nonverbal vocalizations while preserving speech
+    intelligibility, naturalness, and acoustic continuity between verbal and nonverbal segments.
+  </p>
+  <p>
+    NVVSpeech challenge aims to promote nonverbal vocalizations as a crucial yet under-explored component
+    of spoken language communication. It defines shared task settings for both Mandarin Chinese and
+    English, provides held-out test sets, baseline implementations, and standardized evaluation protocols,
+    and enables the community to examine the current capability boundaries of speech understanding and
+    generation systems with nonverbal vocalizations. NVVSpeech will help identify remaining technical
+    bottlenecks and establish more reproducible comparisons across systems, while encouraging research on
+    paralinguistic speech understanding, expressive and controllable speech generation, speech language
+    models, and evaluation methods for more human-like spoken interaction.
+  </p>
+</section>
+<section id="citation" class="section alt">
+  <h2>Citation</h2>
+  <p>If you use the challenge resources or refer to the challenge findings in your work, please cite our
+    <a href="https://arxiv.org/abs/2610.16076" target="_blank" rel="noopener">challenge overview paper</a>:</p>
+  <pre class="code-block">@article{xue2026nvvspeech,
+  title = {The {NVVSpeech} Challenge 2026: Overview and Lessons for Speech Understanding and Generation with Nonverbal Vocalizations},
+  author = {Xue, Liumeng and Cao, Yuang and Hu, Jingbin and Zhan, Qirui and Chen, Huakang and Zheng, Yibin and Chen, Yunxiang and Liu, Houdun and Feng, Su and Wu, Haibin and Lian, Zheng and Xue, Wei and Wu, Bengu and Bu, Hui and Xie, Lei},
+  journal = {arXiv preprint arXiv:2610.16076},
+  year = {2026},
+  doi = {10.48550/arXiv.2610.16076},
+  url = {https://arxiv.org/abs/2610.16076}
+}</pre>
+  <h3>Evaluation Framework</h3>
+  <p>The evaluation framework behind this challenge is described in the NVV-SuperBench paper.
+    If you use its evaluation protocol, please also cite:</p>
+  <pre class="code-block">@article{xue2026nvvsuperbench,
+  title = {{NVV-SuperBench}: Beyond Words, Beyond Quality---Benchmarking Nonverbal Vocalizations in Speech Generation},
+  author = {Xue, Liumeng and Bian, Weizhen and Pan, Jiahao and Wu, Wenxuan and Ren, Yilin and Kang, Boyi and Hu, Jingbin and Ma, Ziyang and Wang, Shuai and Qian, Xinyuan and Lee, Hung-yi and Guo, Yike},
+  journal = {arXiv preprint arXiv:2604.16211},
+  year = {2026}
+}</pre>
+</section>
 </main>
 <footer class="footer">
   <p>NVVSpeech Challenge &middot; ISCSLP 2026 Special Challenge Session</p>
   <p>Contact: <a href="mailto:nvvspeech_iscslp2026@googlegroups.com">nvvspeech_iscslp2026@googlegroups.com</a> &middot;
      <a href="https://github.com/lmxue/nvvspeech-challenge" target="_blank" rel="noopener">GitHub</a></p>
 </footer>
-<script src="script.js?v=20261008-nav-scroll-v2"></script>
+<script src="script.js?v=20261019-resources-v1"></script>
 </body>
 </html>

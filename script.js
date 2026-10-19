@@ -89,10 +89,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var sections = document.querySelectorAll(".section");
   var currentPage = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-links a").forEach(function (a) {
-    var href = a.getAttribute("href");
-    a.classList.toggle("is-active", href === currentPage);
-  });
+  var updateActivePage = function () {
+    var home = currentPage === "index.html";
+    var citation = home && window.location.hash === "#citation";
+    document.querySelectorAll(".nav-links a").forEach(function (a) {
+      var href = a.getAttribute("href");
+      var active = citation ? href === "index.html#citation" : href === currentPage;
+      a.classList.toggle("is-active", active);
+      if (active) a.setAttribute("aria-current", citation ? "location" : "page");
+      else a.removeAttribute("aria-current");
+    });
+  };
+  updateActivePage();
+  window.addEventListener("hashchange", updateActivePage);
 
   if ("IntersectionObserver" in window) {
     var revealObserver = new IntersectionObserver(
