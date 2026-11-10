@@ -1,6 +1,7 @@
 /* Program page */
 .section { opacity: 1; transform: none; }
 .program-date { font-size: 1.15rem; font-weight: 600; }
+.program-room { color: #c62828; }
 .program-table-wrap { overflow-x: auto; }
 .program-table { width: 100%; min-width: 900px; border-collapse: collapse; table-layout: fixed; text-align: left; color: #000; font-size: 1.15rem; line-height: 1.35; }
 .program-col-date { width: 19%; }
